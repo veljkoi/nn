@@ -29,8 +29,8 @@ class Matrix {
 		return [matrix.length, matrix[0].length];
 	}
 
-	static random(columns, rows, incomingNodes) {
-		const deviation = 1 / Math.sqrt(incomingNodes)
+	static random(columns, rows) {
+		const deviation = 1 / Math.sqrt(columns);
 
 		const matrix = Matrix.create(rows, columns);
 
