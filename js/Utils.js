@@ -39,4 +39,10 @@ class Utils {
 		// Draw image data to the canvas
 		ctx.putImageData(imageData, 0, 0);
 	}
+
+  static async getMnistFileContent(fileName) {
+    let response = await fetch(`mnist/${fileName}.csv`);
+    let content = await response.text();
+    return content;
+  }
 }
